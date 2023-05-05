@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <meta charset="utf-8">
+    <title>ChisSolar</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Font
+  ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/logo1.jpeg}">
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
+    <link rel="stylesheet" th:href="@{/rs-plugin/css/settings.css}">
+    <link rel="stylesheet" th:href="@{/css/rev-settings.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" id="fullcolor-css" th:href="@{/#}" type="text/css" media="all">
+    <!-- Favicons
+    ================================================== -->
+
+</head>
+<body class="homepage">
+<div class="images-preloader">
+    <div id="preloader_1" class="rectangle-bounce">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div class="top-line"></div>
+<header class="static header2">
+    <div class="container">
+        <h1 class="logo">
+            <a href="index.html"><img th:src="@{/images/logo1.jpeg}" alt=""></a>
+        </h1>
+        <div class="top-info">
+            <p><span>Cell Number:</span><a href="https://wa.me/+263782783370"> +263 78 278 3370 </a></p>
+            <p class="e-mail"><span>Email:</span> <a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=chisipitesolar@gmail.com">chisipitesolar@gmail.com</a></p>
+        </div>
+        <button class="btn-toggle"><i class="fa fa-reorder"></i></button>
+        <nav class="nav">
+            <ul class="main-menu">
+                <li class="menu-item-has-children">
+                    <div class="arrow-parent"><i class="fa fa-angle-down"></i></div>
+                    <a th:href="@{/index}">Home</a>
+                </li>
+                <li>
+                    <div class="arrow-parent"><i class="fa fa-angle-down"></i></div>
+                    <a th:href="@{/promo_form}">Add Promotions</a>
+                </li>
+                <li><a th:href="@{/admin}">View Messages</a></li>
+                <li><a th:href="@{/promotions}">View Promotions</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="content">
+    <div class="entry-content">
+
+        <div class="page-title">
+            <div class="container">
+                <h1>Admin</h1>
+            </div>
+        </div>
+        <div class="page-content">
+            <section class="top-about">
+                <div class="container">
+                    <div class="row">
+                        <h4 class="values">MESSAGES </h4>
+                        <div class="accordion">
+
+                            <div class="accordion_in">
+                                <th:block th:object="${contact}" th:each="contacts : ${contact}">
+                                    <div class="acc_head"> Sent On:<i th:text="${contacts.createdAt}" ></i></div>
+                                <div class="acc_content">
+                                    <p> Good Day, please email me with a quotation on : <i th:text="${contacts.email}"></i></p>
+                                    <p> Phone Number is: <i th:text="${contacts.phone}"></i></p>
+                                    <p>Message: <i th:text="${contacts.text}" ></i></p>
+                                    <p>Kind Regards, <i th:text="${contacts.subject}" ></i></p>
+                                </div>
+                            </th:block>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+<footer>
+    <div class="widget-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h4><img th:src="@{/images/logo1.jpeg}" alt=""></h4>
+                        <p>Consistently Reliable Distributors in Zimbabwe's Renewable Energy Sector. </p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h4>Company</h4>
+                        <div class="row">
+                            <div class="col-xs-6 col-lg-5">
+                                <ul>
+                                    <li><a th:href="@{/index.html}">Home</a></li>
+                                    <li><a th:href="@{/typical_systems.html}">Typical Systems</a></li>
+                                    <li><a th:href="@{/services.html}">News</a></li>
+                                    <li><a th:href="@{/about.html}">About Us</a></li>
+                                    <li><a th:href="@{/contact.html}">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Contact Us</h4>
+                    <div class="textwidget">
+                        <p><i class="fa fa-home"></i> 7 Bay Noakes Rd, Chisipite, Harare</p>
+                        <p><i class="fa fa-phone"></i> +263 78 278 3370</p>
+                        <p><a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=chisipitesolar@gmail.com"><i class="fa fa-envelope-o"></i></a> chisipitesolar@gmail.com</p>
+                        <p><i class="fa fa-clock-o"></i> Mon-Fri 08:00 - 17:00</p>
+                        <p><i class="fa fa-clock-o"></i> Sat 08:00 - 13:00</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com/profile.php?id=100092442514669"><i class="fa fa-facebook"></i></a>
+                            <a href="https://twitter.com/ChisipiteSolar"><i class="fa fa-twitter"></i></a>
+                            <a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=chisipitesolar@gmail.com"><i class="fa fa-google-plus"></i></a>
+
+                            <a href="https://instagram.com/chisipitesolar?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h4>Gallery</h4>
+                    <div class="gallery-image">
+                        <a href="#"><img th:src="@{/images/qualitysolutions.webp}" alt=""></a>
+                        <a href="#"><img th:src="@{/images/qualitysolutions2.webp}" alt=""></a>
+                        <a href="#"><img th:src="@{/images/qualitysolutions3.webp}" alt=""></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sub-footer">
+        <div class="container">
+            <p>Copyright © 2023 Designed by YMThemes. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
+
+<script type="text/javascript" th:src="@{/js/jquery.min.js}"></script>
+<script type="text/javascript" th:src="@{/js/smk-accordion.js}"></script>
+<script type="text/javascript" th:src="@{/js/classie.js}"></script>
+<script type="text/javascript">
+    (function($) { "use strict";
+        $('.vimeo a,.youtube a').click(function (e) {
+            e.preventDefault();
+            var videoLink = $(this).attr('href');
+            var classeV = $(this).parent();
+            var PlaceV = $(this).parent();
+            if ($(this).parent().hasClass('youtube')) {
+                $(this).parent().wrapAll('<div class="video-wrapper">');
+                $(PlaceV).html('<iframe frameborder="0" height="333" src="' + videoLink + '?autoplay=1&showinfo=0" title="YouTube video player" width="100%"></iframe>');
+            } else {
+                $(this).parent().wrapAll('<div class="video-wrapper">');
+                $(PlaceV).html('<iframe src="' + videoLink + '?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;color=cfa144" width="100%" height="300" frameborder="0"></iframe>');
+            }
+        });
+    })(jQuery);
+</script>
+<script type="text/javascript" th:src="@{js/custom-about.js}"></script>
+
+<script type="text/javascript">
+
+    jQuery(document).ready(function() {
+
+        jQuery(".custom-show").hide();
+
+        jQuery(".custom-close").click(function(){
+            jQuery(this).hide();
+            jQuery(this).next().show();
+            jQuery(this).parent().animate({'left': '+=108px'},'medium');
+        });
+
+
+        jQuery(".custom-show").click(function(){
+            jQuery(this).hide();
+            jQuery(this).prev().show();
+            jQuery(this).parent().animate({'left': '-=108px'},'medium');
+        });
+
+
+        jQuery("#body-layout").on('change', function(){
+            $( 'body' ).toggleClass( "boxed" );
+        });
+
+        jQuery(".s1 .color1").click(function(){
+            jQuery("#fullcolor-css").attr("href", "css/colors/color1.css");
+        });
+
+        jQuery(".s1 .color2").click(function(){
+            jQuery("#fullcolor-css").attr("href", "css/colors/color2.css");
+        });
+
+        jQuery(".s1 .color3").click(function(){
+            jQuery("#fullcolor-css").attr("href", "css/colors/color3.css");
+        });
+
+        jQuery(".s1 .color4").click(function(){
+            jQuery("#fullcolor-css").attr("href", "css/colors/color4.css");
+        });
+
+        jQuery(".s1 .color5").click(function(){
+            jQuery("#fullcolor-css").attr("href", "css/colors/color5.css");
+        });
+
+        jQuery(".s1 .color6").click(function(){
+            jQuery("#fullcolor-css").attr("href", "css/colors/color6.css");
+        });
+
+
+    });
+
+</script>
+
+<script>
+    function myFunction() {
+        document.getElementById("submit").innerHTML = "RESOLVED";
+    }
+</script>
+
+</body>
+
+</html>

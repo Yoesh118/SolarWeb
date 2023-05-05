@@ -1,0 +1,5 @@
+FROM openjdk:17
+EXPOSE 8084
+WORKDIR /SolarWeb
+COPY target/SolarWeb-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
