@@ -72,57 +72,49 @@
 	</div>
 </header>
 
-	<div id="content">
-		<div class="entry-content">
+<div id="content">
+	<div class="entry-content">
 
-			<div class="page-title">
-				<div class="container">
-					<h1>3kVA | 3000W | 48V</h1>
-				</div>
+		<div class="page-title">
+			<div class="container">
+				<h1>Implementation</h1>
 			</div>
+		</div>
 
-			<div class="breadcrumbs">
-				<div class="container">
-					<ul class="crumb">
-						<li><a th:href="@{/index}"><i class="fa fa-home"></i> Home</a></li> <span>/</span>
-						<li><a href="#"> Typical Systems</a></li> <span>/</span>
-						<li class="active">3kVA</li>
-					</ul>
-				</div>
+		<div class="breadcrumbs">
+			<div class="container">
+				<ul class="crumb">
+					<li><a th:href="@{/index}"><i class="fa fa-home"></i> Home</a></li> <span>/</span>
+					<li><a href="#"> Typical Systems</a></li> <span>/</span>
+					<li class="active">Implementation</li>
+				</ul>
 			</div>
+		</div>
 
-			<div class="page-content">
-				<section class="single-services">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-3">
-								<div class="title-service">
-									<ul class="none-style">
-										<li><a th:href="@{typical_systems}">1kVA</a></li>
-										<li class="active"><a th:href="@{typical_systems2}">3kVA</a></li>
-										<li><a th:href="@{typical_systems3}">5kVA</a></li>
-										<li><a th:href="@{typical_systems4}">8kVA</a></li>
-										<li><a th:href="@{typical_systems5}">10kVA</a></li>
-										<li><a th:href="@{typical_systems6}">12kVA</a></li>
-										<li><a th:href="@{typical_systems7}">Implementation</a></li>
-									</ul>
+		<div class="page-content">
+			<section class="single-services">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<div class="title-service">
+								<ul class="none-style">
+									<li><a th:href="@{typical_systems}">1kVA</a></li>
+									<li><a th:href="@{typical_systems2}">3kVA</a></li>
+									<li><a th:href="@{typical_systems3}">5kVA</a></li>
+									<li><a th:href="@{typical_systems4}">8kVA</a></li>
+									<li><a th:href="@{typical_systems5}">10kVA</a></li>
+									<li><a th:href="@{typical_systems6}">12kVA</a></li>
+									<li class="active"><a th:href="@{typical_systems7}">Implementation</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="service-details">
+									<img th:src="@{/images/overall.jpeg}" alt="">
+								<img th:src="@{/images/slider8.jpeg}" alt="">
+									<h4>A digital setup showing how your system will look once implemented.</h4>
 								</div>
 							</div>
-							<div class="col-md-9">
-								<div class="service-details">
-									<img th:src="@{/images/system3.jpeg}" alt="">
-									<h4>3kVA | 3000W | 48V</h4>
-									<p>* Subject to stock availability. Prices subject to change without notice.
-										​
-										This system powers up:<br>
-										Lights <br>
-										Laptops<br>
-										Charging Phones<br>
-										Wi-Fi router<br>
-									Fridge<br>
-									TV
-								</div>
-							</div>							
 						</div>
 					</div>
 				</section>
@@ -139,10 +131,10 @@
 						</div>
 					</div>
 				</section>
-							
+
 			</div>
-			
-			</div>		
+
+			</div>
 			</div>
 
 <footer>
@@ -218,13 +210,13 @@
     jQuery(document).ready(function() {
 
       jQuery(".custom-show").hide();
-      
+
       jQuery(".custom-close").click(function(){
           jQuery(this).hide();
           jQuery(this).next().show();
           jQuery(this).parent().animate({'left': '+=108px'},'medium');
       });
-      
+
 
       jQuery(".custom-show").click(function(){
           jQuery(this).hide();
@@ -236,27 +228,27 @@
       jQuery("#body-layout").on('change', function(){
           $( 'body' ).toggleClass( "boxed" );
       });
-      
+
       jQuery(".s1 .color1").click(function(){
           jQuery("#fullcolor-css").attr("href", "css/colors/color1.css");
       });
-      
+
       jQuery(".s1 .color2").click(function(){
           jQuery("#fullcolor-css").attr("href", "css/colors/color2.css");
       });
-      
+
       jQuery(".s1 .color3").click(function(){
           jQuery("#fullcolor-css").attr("href", "css/colors/color3.css");
       });
-      
+
       jQuery(".s1 .color4").click(function(){
           jQuery("#fullcolor-css").attr("href", "css/colors/color4.css");
       });
-      
+
       jQuery(".s1 .color5").click(function(){
           jQuery("#fullcolor-css").attr("href", "css/colors/color5.css");
       });
-      
+
       jQuery(".s1 .color6").click(function(){
           jQuery("#fullcolor-css").attr("href", "css/colors/color6.css");
       });

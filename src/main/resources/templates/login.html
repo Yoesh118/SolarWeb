@@ -19,12 +19,12 @@
     <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/logo1.jpeg}">
     <!-- CSS
   ================================================== -->
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/css/owl.carousel.css}">
-    <link rel="stylesheet" th:href="@{/rs-plugin/css/settings.css}">
-    <link rel="stylesheet" th:href="@{/css/rev-settings.css}">
-    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
-    <link rel="stylesheet" th:href="@{/style.css}">
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{css/owl.carousel.css}">
+    <link rel="stylesheet" th:href="@{rs-plugin/css/settings.css}">
+    <link rel="stylesheet" th:href="@{css/rev-settings.css}">
+    <link rel="stylesheet" th:href="@{css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{style.css}">
     <link rel="stylesheet" id="fullcolor-css" th:href="@{/#}" type="text/css" media="all">
     <!-- Favicons
     ================================================== -->
@@ -53,13 +53,20 @@
         <button class="btn-toggle"><i class="fa fa-reorder"></i></button>
         <nav class="nav">
             <ul class="main-menu">
+                <li class="menu-item-has-children">
+                    <div class="arrow-parent"><i class="fa fa-angle-down"></i></div>
+                    <a th:href="@{/index}">Home</a>
+                </li>
                 <li>
                     <div class="arrow-parent"><i class="fa fa-angle-down"></i></div>
-                    <a th:href="@{/promo_form}">Add Promotions</a>
+                    <a th:href="@{/typical_systems}">Complete Systems</a>
                 </li>
-                <li><a th:href="@{/admin}">View Messages</a></li>
-                <li><a th:href="@{/promotions}">View Promotions</a></li>
-                <li><a th:href="@{/logout}">Logout</a></li>
+                <li><a th:href="@{/product-list}">Products</a></li>
+                <li><a th:href="@{/about}">About Us</a></li>
+                <li class="menu-item-has-children">
+                    <div class="arrow-parent"><i class="fa fa-angle-down"></i></div>
+                    <a th:href="@{/contact}">Contact</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -70,7 +77,7 @@
 
         <div class="page-title">
             <div class="container">
-                <h1>PROMOTIONS</h1>
+                <h1>LOGIN</h1>
             </div>
         </div>
         <div class="page-content">
@@ -82,28 +89,22 @@
 
                             <div class="accordion_in">
                                 <div class="col-md-8">
-    <div class="promo-form">
-        <h4>Add a promotion</h4>
-        <form th:action="@{/save}" method="POST" th:object="${promoForm}" name="myForm" id="ajax-form" class="comment-form" novalidate="" enctype="multipart/form-data">
-            <div class="row-comment">
-                <p class="col-4">
-                    <input id="name" type="text" name="name" th:field="*{promotionName}" placeholder="Promotion Name">
-                    <span class="error" id="err-name">please enter name</span>
-                </p>
-            </div>
-            <p class="comment-form-comment"><textarea id="message" name="details" th:field="*{details}" placeholder="Promotion Details"></textarea></p>
-            <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit ot-btn btn-color" value="Save Promotion"></p>
-            <div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
-            <div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
-
-        </form>
-    </div>
-        <div id="ajaxsuccess">Successfully saved!!</div>
-    </div>
-</div>
-</div>
+                                    <div>
+                                        <h4>Login</h4>
+                                        <form th:action="@{/auth/authenticate}" method="POST" th:object="${authenticationRequest}" name="myForm" id="ajax-form" class="comment-form" novalidate="" enctype="application/x-www-form-urlencoded">
+                                            <input id="email" type="email" name="email" th:field="*{email}" placeholder="Email Address">
+                                            <p class="comment-form-comment"><p class="col-4">
+                                            <input id="password" type="password" name="password" th:field="*{password}" placeholder="Password">
+                                        </p></p>
+                                            <p class="form-submit"><input name="submit" type="submit" id="submit" class="submit ot-btn btn-color" value="Login"></p>
+                                        </form>
+                                    </div>
+                                    <div id="ajaxsuccess">Successfully saved!!</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
 
             </section>
         </div>

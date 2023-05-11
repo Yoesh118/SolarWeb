@@ -169,7 +169,7 @@
 								<div class="col-md-4 col-sm-6 item all">
 									<div class="project-box ">
 										<a href="#" class="image-project" >
-											<img th:src="@{/images/Battery7.png}" alt="">
+											<img th:src="@{/images/battery7.png}" alt="">
 											<span class="overlay"></span>
 										</a>
 										<h4><a href="#">Battery Cabinet</a></h4>
@@ -193,7 +193,7 @@
 											<img th:src="@{/images/Inverter2.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#">1500/1.5kva</a></h4>
+										<h4><a href="#">1500w/1.5kva</a></h4>
 										<div class="cat-name"><a href="#">Schneider Inverter</a></div>
 									</div>
 								</div>
@@ -203,7 +203,7 @@
 											<img th:src="@{/images/Inverter3.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#"> 3000w/3KVA, 24V</a></h4>
+										<h4><a href="#"> 3000w/3KVA</a></h4>
 										<div class="cat-name"><a href="#">Must Inverter</a></div>
 									</div>
 								</div>
@@ -213,7 +213,7 @@
 											<img th:src="@{/images/Inverter4.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#"> 5KVA, 48V</a></h4>
+										<h4><a href="#"> 5000w/5KVA</a></h4>
 										<div class="cat-name"><a href="#">Must Inverter</a></div>
 									</div>
 								</div>
@@ -223,7 +223,7 @@
 											<img th:src="@{/images/Inverter5.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#">5KVA, 48V</a></h4>
+										<h4><a href="#">5000w/5KVA</a></h4>
 										<div class="cat-name"><a href="#">Growatt Smart Hybrid Inverter</a></div>
 									</div>
 								</div>
@@ -233,7 +233,7 @@
 											<img th:src="@{/images/Inverter6.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#"> 8KVA, 48v</a></h4>
+										<h4><a href="#"> 8000w/8KVA</a></h4>
 										<div class="cat-name"><a href="#">SunSynk Inverter</a></div>
 									</div>
 								</div>
@@ -243,7 +243,7 @@
 											<img th:src="@{/images/Inverter7.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#">10 KVA, 48V</a></h4>
+										<h4><a href="#">10 000w/10KVA</a></h4>
 										<div class="cat-name"><a href="#">SunSynk</a></div>
 									</div>
 								</div>
@@ -253,7 +253,7 @@
 											<img th:src="@{/images/Inverter8.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#"> 10KVA, 48V</a></h4>
+										<h4><a href="#"> 10 000w/10KVA</a></h4>
 										<div class="cat-name"><a href="#">Victron Inverter</a></div>
 									</div>
 								</div>
@@ -263,7 +263,7 @@
 											<img th:src="@{/images/Inverter9.png}" alt="">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#"> 12KVA, 48V</a></h4>
+										<h4><a href="#"> 12 000w/12KVA</a></h4>
 										<div class="cat-name"><a href="#">SunSynk Inverter</a></div>
 									</div>
 								</div>
@@ -376,67 +376,68 @@
 		</div>		
 	</div>
 
-	<footer>
-		<div class="widget-footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="widget">
-							<h4><img th:src="@{/images/logo1.jpeg}" alt=""></h4>
-							<p>Consistently Reliable Distributors in Zimbabwe's Renewable Energy Sector. </p>
-						</div>
+<footer>
+	<div class="widget-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-6">
+					<div class="widget">
+						<h4><img th:src="@{/images/logo1.jpeg}" alt=""></h4>
+						<p>Consistently Reliable Distributors in Zimbabwe's Renewable Energy Sector. </p>
 					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="widget">
-							<h4>Company</h4>
-							<div class="row">
-								<div class="col-xs-6 col-lg-5">
-									<ul>
-										<li><a th:href="@{index.html}">Home</a></li>
-										<li><a th:href="@{typical_systems.html}">Typical Systems</a></li>
-										<li><a th:href="@{services.html}">News</a></li>
-										<li><a th:href="@{about.html}">About Us</a></li>
-										<li><a th:href="@{contact.html}">Contact</a></li>
-									</ul>
-								</div>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<div class="widget">
+						<h4>Company</h4>
+						<div class="row">
+							<div class="col-xs-6 col-lg-5">
+								<ul>
+									<li><a th:href="@{index}">Home</a></li>
+									<li><a th:href="@{typical_systems}">Typical Systems</a></li>
+									<li><a th:href="@{services}">News</a></li>
+									<li><a th:href="@{about}">About Us</a></li>
+									<li><a th:href="@{contact}">Contact</a></li>
+									<li><a th:href="@{/login}">Admin Login</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
-						<h4>Contact Us</h4>
-						<div class="textwidget">
-							<p><i class="fa fa-home"></i> 7 Bay Noakes Rd, Chisipite, Harare</p>
-							<p><i class="fa fa-phone"></i> +263 78 278 3370</p>
-							<p><a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=chisipitesolar@gmail.com"><i class="fa fa-envelope-o"></i></a> chisipitesolar@gmail.com</p>
-							<p><i class="fa fa-clock-o"></i> Mon-Fri 08:00 - 17:00</p>
-							<p><i class="fa fa-clock-o"></i> Sat 08:00 - 13:00</p>
-							<div class="socials">
-								<a href="https://www.facebook.com/profile.php?id=100092442514669"><i class="fa fa-facebook"></i></a>
-								<a href="https://twitter.com/ChisipiteSolar"><i class="fa fa-twitter"></i></a>
-								<a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=chisipitesolar@gmail.com"><i class="fa fa-google-plus"></i></a>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<h4>Contact Us</h4>
+					<div class="textwidget">
+						<p><i class="fa fa-home"></i> 7 Bay Noakes Rd, Chisipite, Harare</p>
+						<p><i class="fa fa-phone"></i> +263 78 278 3370</p>
+						<p><a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=chisipitesolar@gmail.com"><i class="fa fa-envelope-o"></i></a> chisipitesolar@gmail.com</p>
+						<p><i class="fa fa-clock-o"></i> Mon-Fri 08:00 - 17:00</p>
+						<p><i class="fa fa-clock-o"></i> Sat 08:00 - 13:00</p>
+						<div class="socials">
+							<a href="https://www.facebook.com/profile.php?id=100092442514669"><i class="fa fa-facebook"></i></a>
+							<a href="https://twitter.com/ChisipiteSolar"><i class="fa fa-twitter"></i></a>
+							<a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=chisipitesolar@gmail.com"><i class="fa fa-google-plus"></i></a>
 
-								<a href="https://instagram.com/chisipitesolar?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i></a>
-							</div>
+							<a href="https://instagram.com/chisipitesolar?igshid=YmMyMTA2M2Y="><i class="fa fa-instagram"></i></a>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6">
-						<h4>Gallery</h4>
-						<div class="gallery-image">
-							<a href="#"><img th:src="@{/images/qualitysolutions.webp}" alt=""></a>
-							<a href="#"><img th:src="@{/images/qualitysolutions2.webp}" alt=""></a>
-							<a href="#"><img th:src="@{/images/qualitysolutions3.webp}" alt=""></a>
+				</div>
+				<div class="col-md-3 col-sm-6">
+					<h4>Gallery</h4>
+					<div class="gallery-image">
+						<a href="#"><img th:src="@{/images/slider6.jpeg}" alt=""></a>
+						<a href="#"><img th:src="@{/images/slider5.jpeg}" alt=""></a>
+						<a href="#"><img th:src="@{/images/slider3.jpeg}" alt=""></a>
 
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="sub-footer">
-			<div class="container">
-				<p>Copyright © 2023 Designed by YMThemes. All rights reserved.</p>
-			</div>
+	</div>
+	<div class="sub-footer">
+		<div class="container">
+			<p>Copyright © 2023 Designed by YMThemes. All rights reserved.</p>
 		</div>
-	</footer>
+	</div>
+</footer>
 	<a href="#top" id="back-to-top"><i class="fa fa-angle-up"></i></a>
 
 <script type="text/javascript" th:src="@{js/jquery.min.js}"></script>

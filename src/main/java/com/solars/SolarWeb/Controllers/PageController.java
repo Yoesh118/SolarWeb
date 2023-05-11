@@ -1,5 +1,6 @@
 package com.solars.SolarWeb.Controllers;
 
+import com.solars.SolarWeb.Domain.AuthenticationRequest;
 import com.solars.SolarWeb.Domain.Contact;
 import com.solars.SolarWeb.Domain.PromoForm;
 import com.solars.SolarWeb.Repositories.ContactRepository;
@@ -39,8 +40,7 @@ public class PageController {
     @ResponseBody
     public ModelAndView showAdmin(Model model) {
         model.addAttribute("contact", contactRepository.findAll());
-        ModelAndView modelAndView = new ModelAndView("admin");
-        return modelAndView;
+        return new ModelAndView("admin");
     }
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
@@ -77,8 +77,7 @@ public class PageController {
     @ResponseBody
     public ModelAndView showForm(Model model) {
         model.addAttribute("promoForm", new PromoForm());
-        ModelAndView modelAndView = new ModelAndView("promo_form");
-        return modelAndView;
+        return new ModelAndView("promo_form");
     }
 
     @RequestMapping(value = "/promotions", method = RequestMethod.GET)
@@ -92,8 +91,7 @@ public class PageController {
     @RequestMapping(value = "/typical_systems3", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showSystems3() {
-        ModelAndView modelAndView = new ModelAndView("typical_systems3");
-        return modelAndView;
+        return new ModelAndView("typical_systems3");
     }
 
     @RequestMapping(value = "/typical_systems4", method = RequestMethod.GET)
@@ -108,5 +106,26 @@ public class PageController {
     public ModelAndView showSystems5() {
         ModelAndView modelAndView = new ModelAndView("typical_systems5");
         return modelAndView;
+    }
+
+    @RequestMapping(value = "/typical_systems6", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView showSystems6() {
+        ModelAndView modelAndView = new ModelAndView("typical_systems6");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/typical_systems7", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView showSystems7() {
+        ModelAndView modelAndView = new ModelAndView("typical_systems7");
+        return modelAndView;
+    }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView login(Model model) {
+        model.addAttribute("authenticationRequest", new AuthenticationRequest());
+        return new ModelAndView("login");
     }
 }
