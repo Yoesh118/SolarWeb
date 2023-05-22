@@ -94,13 +94,12 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-12">
-								<ul id="filter" class="filter-projects none-style">
-									<li><a href="#" data-filter=".all" title="">Batteries</a></li>
-									<li><a href="#" data-filter=".inverter" title="">Inverters </a></li>
-									<li><a href="#" data-filter=".accessories" title="">Accessories</a></li>
-									<li><a href="#" data-filter=".promotions" title="">Promotions</a></li>
-									<li><a href="#" data-filter=".facts" title="">Fact Hub</a></li>
-									
+								<ul class="filter-projects none-style">
+									<li><a th:href="@{/product-list}" title="" class="active">Batteries</a></li>
+									<li><a th:href="@{/inverters}" title="">Inverters </a></li>
+									<li><a th:href="@{/accessories}" title="">Accessories</a></li>
+									<li><a th:href="@{/promotionsList}" title="">Promotions</a></li>
+									<li><a th:href="@{/facthub}" title="">Fact Hub</a></li>
 								</ul>
 							</div>							
 						</div>
@@ -176,205 +175,13 @@
 										<div class="cat-name"><a href="#">Pylontech</a></div>
 									</div>
 								</div>
-
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter1.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">100w/1kva</a></h4>
-										<div class="cat-name"><a href="#">MUST Inverter</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter2.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">1500w/1.5kva</a></h4>
-										<div class="cat-name"><a href="#">Schneider Inverter</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter3.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#"> 3000w/3KVA</a></h4>
-										<div class="cat-name"><a href="#">Must Inverter</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter4.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#"> 5000w/5KVA</a></h4>
-										<div class="cat-name"><a href="#">Must Inverter</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter5.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">5000w/5KVA</a></h4>
-										<div class="cat-name"><a href="#">Growatt Smart Hybrid Inverter</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter6.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#"> 8000w/8KVA</a></h4>
-										<div class="cat-name"><a href="#">SunSynk Inverter</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter7.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">10 000w/10KVA</a></h4>
-										<div class="cat-name"><a href="#">SunSynk</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter8.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#"> 10 000w/10KVA</a></h4>
-										<div class="cat-name"><a href="#">Victron Inverter</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item inverter">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Inverter9.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#"> 12 000w/12KVA</a></h4>
-										<div class="cat-name"><a href="#">SunSynk Inverter</a></div>
-									</div>
-								</div>
-
-								<div class="col-md-4 col-sm-6 item accessories">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/accessory1.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<div class="cat-name"><a href="#">Solar Geyser</a></div>
-									</div>
-								</div>
-
-								<div class="col-md-4 col-sm-6 item accessories">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/accessory4.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<div class="cat-name"><a href="#">Solar Water Pump</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item accessories">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/accessory5.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<div class="cat-name"><a href="#">Solar Panels</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item accessories">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/accessory3.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<div class="cat-name"><a href="#">PV Cable</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item accessories">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/accessory2.png}" alt="">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">Roof Mounting Kit</a></h4>
-										<div class="cat-name"><a href="#">Includes: Anti-theft clips, Rails, Nuts, Bolts, Washers</a></div>
-									</div>
-								</div>
-
-								<div class="item facts">
-									<div class="page-content">
-										<section class="typography">
-											<div class="container">
-												<div class="row">
-													<div class="col-md-12">
-															<h3>UP 2500 24V 100AH</h3>
-															<p>The Pylotech UP2500 is a Hybrid Energy Storage System (HESS) provided by Pylontech.
-																Pylontech uses its own lithium iron phosphate cells to ensure the highest safety value.
-															An inbuilt Battery Management System protects pylontech battery cells from abnormal electrical conditions like charging and discharging.
-															We provide you with a 7 year warranty on purchased batteries.</p>
-
-														<h3>USC3000 48V 75AH</h3>
-														<p>The Pylontech USC3000 3.55kWh lithium-ion battery is made up of lithium-ion modules. These allow us to have a modular photovoltaic storage system to expand its capacity with up to 16 units without the need for any additional equipment.
-														It contains an internal BMS that is responsible for distributing power between the cells efficiently and safely, preventing
-														overcharging or excessive discharging.
-														All clients that purchase this battery are rewarded with a 7 year warranty on the same.
-														</p>
-
-														<h3>UP5000 48V 100AH</h3>
-														<p>The Pylontech Lithium ion UP5000 Solar battery is made up of lithium-ion modules.
-															This battery is a great option when one needs to support high power applications, limited installation space, restrictedload-bearing and long life cycle.
-															This lithium battery has an easily workable configuration that allows multiple batteries to be connected in parallel.
-															All clients that purchase this battery are rewarded with a 7 year warranty on the same.
-														</p>
-
-
-													</div>
-												</div>
-											</div>
-										</section>
-									</div>
-								</div>
-
-								<div class="item promotions">
-									<div class="page-content">
-										<section class="typography">
-											<div class="container">
-												<div class="row">
-													<div class="col-md-12">
-														<th:block th:object="${promoForm}" th:each="form : ${promoForm}">
-														<h3 th:text="${form.promotionName}"></h3>
-														<p th:text="${form.details}"></p>
-														</th:block>
-													</div>
-												</div>
-											</div>
-										</section>
-									</div>
-								</div>
-								
 							</div>
 						</div>
 					</div>
-				</section>			
+				</section>
 			</div>
-
-		</div>		
-	</div>
+		</div>
+</div>
 
 <footer>
 	<div class="widget-footer">

@@ -86,7 +86,7 @@
 		// --------------------------------------------------
 		var $container = $('#gallery');
 		$container.isotope({
-			itemSelector: '.item',
+			itemSelector: '.all',
 			filter: '*'
 		});
 

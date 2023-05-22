@@ -25,15 +25,13 @@ public class PageController {
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showHome() {
-        ModelAndView modelAndView = new ModelAndView("index");
-        return modelAndView;
+        return new ModelAndView("index");
     }
 
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showAbout() {
-        ModelAndView modelAndView = new ModelAndView("about");
-        return modelAndView;
+        return new ModelAndView("about");
     }
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
@@ -47,30 +45,25 @@ public class PageController {
     @ResponseBody
     public ModelAndView showContact(Model model) {
         model.addAttribute("contact", new Contact());
-        ModelAndView modelAndView = new ModelAndView("contact");
-        return modelAndView;
+        return new ModelAndView("contact");
     }
 
     @RequestMapping(value = "/product-list", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showProducts(Model model) {
-        model.addAttribute("promoForm", promoFormRepository.findAll());
-        ModelAndView modelAndView = new ModelAndView("product-list");
-        return modelAndView;
+        return new ModelAndView("product-list");
     }
 
     @RequestMapping(value = "/typical_systems", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showSystems() {
-        ModelAndView modelAndView = new ModelAndView("typical_systems");
-        return modelAndView;
+        return new ModelAndView("typical_systems");
     }
 
     @RequestMapping(value = "/typical_systems2", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showSystems2() {
-        ModelAndView modelAndView = new ModelAndView("typical_systems2");
-        return modelAndView;
+        return new ModelAndView("typical_systems2");
     }
 
     @RequestMapping(value = "/promo_form", method = RequestMethod.GET)
@@ -84,8 +77,7 @@ public class PageController {
     @ResponseBody
     public ModelAndView showPromotions(Model model) {
         model.addAttribute("promoForm", promoFormRepository.findAll());
-        ModelAndView modelAndView = new ModelAndView("promotions");
-        return modelAndView;
+        return new ModelAndView("promotions");
     }
 
     @RequestMapping(value = "/typical_systems3", method = RequestMethod.GET)
@@ -97,29 +89,50 @@ public class PageController {
     @RequestMapping(value = "/typical_systems4", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showSystems4() {
-        ModelAndView modelAndView = new ModelAndView("typical_systems4");
-        return modelAndView;
+        return new ModelAndView("typical_systems4");
     }
 
     @RequestMapping(value = "/typical_systems5", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showSystems5() {
-        ModelAndView modelAndView = new ModelAndView("typical_systems5");
-        return modelAndView;
+        return new ModelAndView("typical_systems5");
     }
 
     @RequestMapping(value = "/typical_systems6", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showSystems6() {
-        ModelAndView modelAndView = new ModelAndView("typical_systems6");
-        return modelAndView;
+        return new ModelAndView("typical_systems6");
     }
 
     @RequestMapping(value = "/typical_systems7", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showSystems7() {
-        ModelAndView modelAndView = new ModelAndView("typical_systems7");
-        return modelAndView;
+        return new ModelAndView("typical_systems7");
+    }
+
+    @RequestMapping(value = "/facthub", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView showFacts() {
+        return new ModelAndView("facthub");
+    }
+
+    @RequestMapping(value = "/accessories", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView showAccessories() {
+        return new ModelAndView("accessories");
+    }
+
+    @RequestMapping(value = "/inverters", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView showInverters() {
+        return new ModelAndView("inverters");
+    }
+
+    @RequestMapping(value = "/promotionsList", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView promoList(Model model) {
+        model.addAttribute("promoForm", promoFormRepository.findAll());
+        return new ModelAndView("promotionsList");
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)
