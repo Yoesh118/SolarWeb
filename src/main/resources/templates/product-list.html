@@ -16,7 +16,7 @@
   ================================================== -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
 
-	<link rel="shortcut icon" type="image/x-icon" th:href="@{/images/logo1.jpeg}">
+	<link rel="shortcut icon" type="image/x-icon" th:href="@{/images/logo1.png}">
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" th:href="@{css/bootstrap.min.css}">
@@ -44,7 +44,7 @@
 <header class="static header2">
 	<div class="container">
 		<h1 class="logo">
-			<a href="index.html"><img th:src="@{/images/logo1.jpeg}" alt="chissolar logo"></a>
+			<a href="index.html"><img th:src="@{/images/logo1.png}" alt="chissolar logo"></a>
 		</h1>
 		<div class="top-info">
 			<p><span>Cell Number:</span><a href="https://wa.me/+263782783370"> +263 78 278 3370 </a></p>
@@ -105,17 +105,19 @@
 						</div>
 						<div class="row">
 							<div id="gallery"  >
-								<div class="col-md-4 col-sm-6 item all">
+								<div class="col-md-4 col-sm-6 item all" style="top: 10px;">
 									<div class="project-box ">
 										<a href="#" class="image-project">
-											<img th:src="@{/images/Battery1.png}" alt="solar battery">
+											<img th:src="@{/images/newbattery.jpg}" alt="solar battery">
 											<span class="overlay"></span>
 										</a>
-										<h4><a href="#">UP 5000, 48V, 100AH</a></h4>
-										<div class="cat-name"><a href="#">Lithium Battery</a></div>
+										<h4><a href="#">12V, 100AH</a></h4>
+										<div class="cat-name"><a href="#"> lithium-ion, Pylontech</a></div>
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-6 item all">
+								<br>
+								<br>
+								<div class="col-md-4 col-sm-6 item all" style="top: 10px;">
 									<div class="project-box ">
 										<a href="#" class="image-project">
 											<img th:src="@{/images/Battery2.png}" alt="solar battery">
@@ -125,37 +127,9 @@
 										<div class="cat-name"><a href="#">Lithium Battery</a></div>
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-6 item all">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Battery3.png}" alt="solar battery">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">Narada, 48V, 100AH</a></h4>
-										<div class="cat-name"><a href="#">Narada</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item all">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Battery4.png}" alt="solar battery">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">Champion, 12V, 200AH</a></h4>
-										<div class="cat-name"><a href="#">Gel Battery</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item all">
-									<div class="project-box ">
-										<a href="#" class="image-project" >
-											<img th:src="@{/images/Battery5.png}" alt="solar battery">
-											<span class="overlay"></span>
-										</a>
-										<h4><a href="#">24V, 100AH</a></h4>
-										<div class="cat-name"><a href="#">Blue Carbon</a></div>
-									</div>
-								</div>
-								<div class="col-md-4 col-sm-6 item all">
+								<br>
+								<br>
+								<div class="col-md-4 col-sm-6 mt-1 item all" style="top: 10px;">
 									<div class="project-box ">
 										<a href="#" class="image-project" >
 											<img th:src="@{/images/Battery6.png}" alt="solar battery">
@@ -165,7 +139,57 @@
 										<div class="cat-name"><a href="#">Lithium Battery</a></div>
 									</div>
 								</div>
-								<div class="col-md-4 col-sm-6 item all">
+								<br>
+								<br>
+								<div class="col-md-4 col-sm-6 item all" style="top: 10px;">
+									<div class="project-box ">
+										<a href="#" class="image-project">
+											<img th:src="@{/images/Battery1.png}" alt="solar battery">
+											<span class="overlay"></span>
+										</a>
+										<h4><a href="#">UP 5000, 48V, 100AH</a></h4>
+										<div class="cat-name"><a href="#">Lithium Battery</a></div>
+									</div>
+								</div>
+								<br>
+								<br>
+								<div class="col-md-4 col-sm-6 mt-1 item all" style="top: 10px;">
+									<div class="project-box ">
+										<a href="#" class="image-project" >
+											<img th:src="@{/images/Battery3.png}" alt="solar battery">
+											<span class="overlay"></span>
+										</a>
+										<h4><a href="#">Narada, 48V, 100AH</a></h4>
+										<div class="cat-name"><a href="#">Narada</a></div>
+									</div>
+								</div>
+								<br>
+								<br>
+								<div class="col-md-4 col-sm-6 item all" style="top: 10px;">
+									<div class="project-box ">
+										<a href="#" class="image-project" >
+											<img th:src="@{/images/Battery4.png}" alt="solar battery">
+											<span class="overlay"></span>
+										</a>
+										<h4><a href="#">Champion, 12V, 200AH</a></h4>
+										<div class="cat-name"><a href="#">Gel Battery</a></div>
+									</div>
+								</div>
+								<br>
+								<br>
+								<div class="col-md-4 col-sm-6 item all" style="top: 10px;">
+									<div class="project-box ">
+										<a href="#" class="image-project" >
+											<img th:src="@{/images/Battery5.png}" alt="solar battery">
+											<span class="overlay"></span>
+										</a>
+										<h4><a href="#">24V, 100AH</a></h4>
+										<div class="cat-name"><a href="#">Blue Carbon</a></div>
+									</div>
+								</div>
+								<br>
+								<br>
+								<div class="col-md-4 col-sm-6 item all" style="top: 10px;">
 									<div class="project-box ">
 										<a href="#" class="image-project" >
 											<img th:src="@{/images/battery7.png}" alt="solar battery">
@@ -189,7 +213,7 @@
 			<div class="row">
 				<div class="col-md-3 col-sm-6">
 					<div class="widget">
-						<h4><img th:src="@{/images/logo1.jpeg}" alt="chissolar logo"></h4>
+						<h4><img th:src="@{/images/logo1.png}" alt="chissolar logo"></h4>
 						<p>Consistently Reliable Distributors in Zimbabwe's Renewable Energy Sector. </p>
 					</div>
 				</div>
@@ -200,8 +224,8 @@
 							<div class="col-xs-6 col-lg-5">
 								<ul>
 									<li><a th:href="@{index}">Home</a></li>
-									<li><a th:href="@{typical_systems}">Typical Systems</a></li>
-									<li><a th:href="@{services}">News</a></li>
+									<li><a th:href="@{typical_systems}">Complete Systems</a></li>
+									<li><a th:href="@{product-list}">Products</a></li>
 									<li><a th:href="@{about}">About Us</a></li>
 									<li><a th:href="@{contact}">Contact</a></li>
 									<li><a th:href="@{/login}">Admin Login</a></li>
@@ -214,7 +238,7 @@
 					<h4>Contact Us</h4>
 					<div class="textwidget">
 						<p><i class="fa fa-home"></i> 7 Bay Noakes Rd, Chisipite, Harare</p>
-						<p><i class="fa fa-phone"></i> +263 78 278 3370</p>
+						<p><i class="fa fa-phone"></i> +263 78 278 3370/ +263 8644 281 236</p>
 						<p><a href="https://mail.google.com/mail/?view=cm&amp;source=mailto&amp;to=sales@chissolar.co.zw"><i class="fa fa-envelope-o"></i></a> sales@chissolar.co.zw</p>
 						<p><i class="fa fa-clock-o"></i> Mon-Fri 08:00 - 17:00</p>
 						<p><i class="fa fa-clock-o"></i> Sat 08:00 - 13:00</p>
