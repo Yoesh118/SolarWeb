@@ -34,7 +34,7 @@ public class PageController {
         return new ModelAndView("about");
     }
 
-    @RequestMapping(value = "/admin", method = RequestMethod.GET)
+    @RequestMapping(value = "/adminnn", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView showAdmin(Model model) {
         model.addAttribute("contact", contactRepository.findAll());
@@ -108,6 +108,12 @@ public class PageController {
     @ResponseBody
     public ModelAndView showSystems7() {
         return new ModelAndView("typical_systems7");
+    }
+
+    @RequestMapping(value = "/typical_systems8", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelAndView showSystems8() {
+        return new ModelAndView("typical_systems8");
     }
 
     @RequestMapping(value = "/facthub", method = RequestMethod.GET)

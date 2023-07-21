@@ -45,7 +45,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests()
                 .requestMatchers("/",
                         "/login",
-                        "/admin",
+                        "/adminnn",
                         "/promotions",
                         "/auth/authenticate",
                         "/sendMail/send",
@@ -65,6 +65,7 @@ public class SecurityConfig {
                         "/typical_systems5",
                         "/typical_systems6",
                         "/typical_systems7",
+                        "/typical_systems8",
                         "/css/**",
                         "/colors/**",
                         "/fonts/**",
