@@ -1137,12 +1137,13 @@ div.error {
   padding: 0 10px;
 }
 .vimeo {
-  margin: 0;
+  margin-bottom: 30px;
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0;
   height: 0;
   overflow: hidden;
+
 }
 .vimeo a {
   position: relative;
@@ -1396,6 +1397,7 @@ div.error {
   -webkit-transition: 0.6s;
   transition: 0.6s;
   opacity: 0;
+  margin-top: 30px;
 }
 .image-project img {
   -webkit-transform: scale(1);
