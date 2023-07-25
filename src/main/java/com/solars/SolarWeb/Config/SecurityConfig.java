@@ -47,7 +47,7 @@ public class SecurityConfig {
                         "/login",
                         "/adminnn",
                         "/promotions",
-                        "/auth/authenticate",
+                        "/auth/authenticate/",
                         "/sendMail/send",
                         "/promo_form",
                         "/index",
