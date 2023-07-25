@@ -47,7 +47,7 @@ public class SecurityConfig {
                         "/login",
                         "/adminnn",
                         "/promotions",
-                        "/auth/authenticate/",
+                        "/auth/authenticate",
                         "/sendMail/send",
                         "/promo_form",
                         "/index",
@@ -81,9 +81,6 @@ public class SecurityConfig {
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-                .and()
-                .formLogin()
-                .defaultSuccessUrl("/adminnn", true)
                 .and()
                 .authenticationProvider(authenticationProvider())
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
