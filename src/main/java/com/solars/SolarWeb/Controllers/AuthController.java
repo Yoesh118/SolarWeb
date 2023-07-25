@@ -35,7 +35,7 @@ public class AuthController {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
         final UserDetails user = userService.findByEmail(request.getEmail());
         if (user != null){
-            redirectStrategy.sendRedirect(servletRequest, response, "/admin");
+            redirectStrategy.sendRedirect(servletRequest, response, "/adminnn");
             return ResponseEntity.ok(jwtUtils.generateToken(user));
         }
          return ResponseEntity.status(400).body("An error occurred");
