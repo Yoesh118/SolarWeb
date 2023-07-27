@@ -87,7 +87,7 @@
         <form th:action="@{/save}" method="POST" th:object="${promoForm}" name="myForm" id="ajax-form" class="comment-form" novalidate="" enctype="multipart/form-data">
             <div class="row-comment">
                 <p class="col-4">
-                    <input id="name" type="text" name="name" th:field="*{promotionName}" placeholder="Promotion Name">
+                    <input id="name" type="text" name="promotionName" th:field="*{promotionName}" placeholder="Promotion Name">
                     <span class="error" id="err-name">please enter name</span>
                 </p>
             </div>

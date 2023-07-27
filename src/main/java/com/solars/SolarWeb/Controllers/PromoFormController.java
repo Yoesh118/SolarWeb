@@ -19,11 +19,8 @@ public class PromoFormController {
 
     @PostMapping(value = "/save")
     public void submit(@Validated @ModelAttribute PromoForm promoForm, ModelMap model) {
-        PromoForm s = new PromoForm();
         model.addAttribute("promoForm", new PromoForm() );
-       s.setPromotionName(promoForm.getPromotionName());
-       s.setDetails(promoForm.getDetails());
-       promoFormRepository.save(s);
+       promoFormRepository.save(promoForm);
     }
 
     @Transactional

@@ -50,6 +50,8 @@ public class SecurityConfig {
                         "/auth/authenticate",
                         "/sendMail/send",
                         "/promo_form",
+                        "/save",
+                        "/deleteC/**",
                         "/index",
                         "/about",
                         "/contact",
