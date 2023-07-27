@@ -1,9 +1,14 @@
 package com.solars.SolarWeb.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -13,9 +18,14 @@ import java.util.List;
 @Repository
 public class UserService {
 
-    private final static List<UserDetails> APPLICATION_USERS = Arrays.asList(
+    @Bean
+    public PasswordEncoder userPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    private final List<UserDetails> APPLICATION_USERS = Arrays.asList(
             new User("chisisolar@gmail.com",
-                    "chisisolar2023",
+                    this.userPasswordEncoder().encode("chisisolar2023"),
                     Collections.singleton(new SimpleGrantedAuthority("ROLE_ADMIN")))
     );
 
@@ -26,4 +36,5 @@ public class UserService {
                 .findFirst()
                 .orElseThrow(() -> new UsernameNotFoundException(" User Not Found"));
     }
+
 }

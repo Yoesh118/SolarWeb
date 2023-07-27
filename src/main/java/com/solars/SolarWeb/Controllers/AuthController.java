@@ -32,11 +32,15 @@ public class AuthController {
     @PostMapping("/authenticate")
     public ResponseEntity<String> authenticate( AuthenticationRequest request, HttpServletRequest servletRequest,
                                                HttpServletResponse response) throws IOException {
-        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), request.getPassword()));
+        System.out.println("1");
+        authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getEmail(), userService.userPasswordEncoder().encode(request.getPassword())));
+        System.out.println("2");
         final UserDetails user = userService.findByEmail(request.getEmail());
+        System.out.println("3");
         if (user != null){
-            //redirectStrategy.sendRedirect(servletRequest, response, "/adminnn");
+            System.out.println("4");
             response.sendRedirect("/adminnn");
+            System.out.println("5");
             return ResponseEntity.ok(jwtUtils.generateToken(user));
         }
          return ResponseEntity.status(400).body("An error occurred");
